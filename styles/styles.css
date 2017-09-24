@@ -1,0 +1,62 @@
+body, .jumbotron {
+    padding: 30px;
+}
+
+body {
+    background-image: url('../img/desk.jpg');
+    background-size: cover;
+}
+
+.floater {
+    background: #fff;
+    font-size: 19px;
+    line-height: 1.5;
+    border-radius: 5px;
+    max-width: 500px;
+    margin: 0 auto;
+    position: relative;
+    transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.4) all;
+}
+
+.floater input[type=text] {
+    padding: 30px 20px;
+    border: none;
+    box-shadow: none;
+    font-size: 14px;
+    transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.4) all;
+}
+
+.floater-bottom {
+    padding: 6px 10px 7px;
+    text-align: right;
+    border-top: 1px solid #DDD;
+}
+
+.floater-bottom button {
+    padding: 4px 8px;
+    font-size: 8px;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.80);
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: 0.3s ease opacity;
+}
+
+body.show-floater .floater {
+    transform: scale(1.1);
+}
+
+body.show-floater .floater input[type=text] {
+    padding: 50px 20px;
+    font-size: 18px;
+}
+
+body.show-floater .overlay {
+   opacity: 1;
+}
